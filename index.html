@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="renderer" content="webkit"/>
+		<meta name="force-rendering" content="webkit"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+		<!--[if lt IE 11]> 
+		<script>/*@cc_on window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script> 
+		<![endif]--> 
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tongji.css"/>
+		<link rel="stylesheet" type="text/css" href="css/alert.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/>
+		<link rel="stylesheet" type="text/css" href="css/page.css"/>
+	</head>
+	<body>
+		<div id="app">
+		<div class="header" id="header">
+			<div class="logo">
+				<img src="img/logo.png"/>
+				<span>建设领域务工人员信息化综合管理平台 - 雄安</span>
+			</div>
+			<div class="search">
+				<input type="" name="" id="" value="" />
+				<img src="img/search.png"/>
+			</div>
+			<div class="config">
+				<span><img src="img/config.png"/></span>
+				<span><img src="img/fullscreen.png"/></span>
+				<span><img src="img/loginOut.png"/></span>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="navList">
+				<span>分析与预警</span>
+				<span>项目管理</span>
+				<span>人员管理</span>
+				<span>诚信积分</span>
+				<span>监督管理</span>
+				<div class="backTop"></div>
+			</div>
+			
+		</div>
+		<div class="banner">
+			<div class="list">
+				<div class="item">
+					<span class="title">分析与预警</span>
+					<span class="img"><img src="img/alert.png" alt="" /></span>
+				</div>
+				<div class="item">
+					<span class="title">项目管理</span>
+					<span class="img"><img src="img/project.png" alt="" /></span>
+				</div>
+				<div class="item">
+					<span class="title">人员管理</span>
+					<span class="img"><img src="img/man.png" alt="" /></span>
+				</div>
+				<div class="item">
+					<span class="title">诚信积分</span>
+					<span class="img"><img src="img/chenxin.png" alt="" /></span>
+				</div>
+				<div class="item">
+					<span class="title">监督管理</span>
+					<span class="img"><img src="img/jiandu.png" alt="" /></span>
+				</div>
+			</div>
+		</div>
+		<div class="moduleAll" :class="{active:tabToggle,tab1:partToggle[0],tab2:partToggle[1]}">
+			<div class="module">
+				<div class="part p1" :class="{active:partToggle[0]}" @click="tabClick(0)">
+					<div class="title">
+						<div class="icon"><img src="img/tongji.png"/></div>
+						<span>统计分析</span>
+					</div>
+					<div class="changyong">
+						
+						<div class="content">
+							<div id="dtyl" style="width: 300px; height: 250px; margin: 0 auto">
+</div>
+	<div id="qkyl" style="width: 300px; height: 250px; margin: 0 auto">
+</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="part p2" :class="{active:partToggle[1]}" @click="tabClick(1)">
+					<div class="title">
+						<div class="icon"><img src="img/yujing.png"/></div>
+						<span>预警管理</span>
+					</div>
+					<div class="changyong">
+						<div class="yjItem">
+							<div class="itemHead">
+								
+							</div>
+							<div class="itemContent">
+								<span>预警对象：<b>5</b>个</span>
+								<span>预警项目：<b>6</b>个</span>
+								<span>预警时间：2018-04-16</span>
+							</div>
+							<div class="itemFooter">
+								工资款拨付不足
+							</div>
+						</div>
+						
+						<div class="yjItem">
+							<div class="itemHead">
+								
+							</div>
+							<div class="itemContent">
+								<span>预警对象：<b>5</b>个</span>
+								<span>预警项目：<b>6</b>个</span>
+								<span>预警时间：2018-04-16</span>
+							</div>
+							<div class="itemFooter">
+								未发工资预警
+							</div>
+						</div>
+						
+						<div class="yjItem">
+							<div class="itemHead">
+								
+							</div>
+							<div class="itemContent">
+								<span>预警对象：<b>5</b>个</span>
+								<span>预警项目：<b>6</b>个</span>
+								<span>预警时间：2018-04-16</span>
+							</div>
+							<div class="itemFooter">
+								工资发放名单差异预警
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="tabContent" :class="{active:partToggle[0]}" id="tab1">
+			<div class="close"></div>
+			<div class="tabMain">
+				<div class="tabTitle">
+					<div class="left">
+						<span @click="toggleDetail('11')" class="button" :class="{active:contentToggle=='11'}"><span>项目统计分析</span></span>
+						<span @click="toggleDetail('12')" class="button" :class="{active:contentToggle=='12'}"><span>务工人员相关统计</span></span>
+						<span @click="toggleDetail('13')" class="button" :class="{active:contentToggle=='13'}"><span>务工人员薪资状况统计</span></span>
+						
+					</div>
+					<div class="right">
+						<span class="button fullscreen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+						<span class="button alert"><span>收起详情</span></span>
+					</div>
+				</div>
+				<div class="detail" :class="{active:contentToggle=='11'}" id="content11">
+					<div class="fullscreen"><img src="img/content/fullscreen.png"/></div>
+					<div class="list">
+						<div class="item">
+							<div class="itemTitle">
+								<span class="datetime">2018年 4月</span>
+								<span class="title">项目实名制执行等级</span>
+								<span class="youhua"><img src="img/content/youhua.png"/></span>
+							</div>
+							<div class="itemContent">
+								<div class="charts" id="xmsmzzxdj">
+									
+								</div>
+								
+							</div>
+						</div>
+						
+						
+						<div class="item">
+							<div class="itemTitle">
+								<span class="datetime">2018年 4月</span>
+								<span class="title">项目异动</span>
+								<span class="youhua"><img src="img/content/youhua.png"/></span>
+							</div>
+							<div class="itemContent">
+								<div class="charts" id="xmyd">
+									
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="detail" :class="{active:contentToggle=='12'}" id="content12">
+					<div class="fullscreen"><img src="img/content/fullscreen.png"/></div>
+					<div class="list">
+						<div class="item">
+							<div class="itemTitle">
+								<span class="datetime">2018年 4月</span>
+								<span class="title">来源分布</span>
+								<span class="youhua"><img src="img/content/youhua.png"/></span>
+							</div>
+							<div class="itemContent">
+								<div class="charts" id="lyfb">
+									
+								</div>
+								<!--<div class="content">
+									<div class="item"></div>
+									<div class="item"></div>
+									<div class="item"></div>
+								</div>-->
+							</div>
+						</div>
+						
+						
+						<div class="item">
+							<div class="itemTitle">
+								<span class="datetime">2018年 4月</span>
+								<span class="title">学历分布</span>
+								<span class="youhua"><img src="img/content/youhua.png"/></span>
+							</div>
+							<div class="itemContent">
+								<div class="charts" id="xlfb">
+									
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="item">
+							<div class="itemTitle">
+								<span class="datetime">2018年 4月</span>
+								<span class="title">项目管理人员考勤情况一览</span>
+								<span class="youhua"><img src="img/content/youhua.png"/></span>
+							</div>
+							<div class="itemContent">
+								<div class="charts" id="kqqk">
+									
+								</div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="itemTitle">
+								<span class="datetime">2018年 4月</span>
+								<span class="title">人员类型分布</span>
+								<span class="youhua"><img src="img/content/youhua.png"/></span>
+							</div>
+							<div class="itemContent">
+								<div class="charts" id="rylx">
+									
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="item">
+							<div class="itemTitle">
+								
+								<span class="title" style="width: 75%;text-align: right;">2010-2018年各年龄段劳务工分布趋势</span>
+								<span class="youhua"><img src="img/content/youhua.png"/></span>
+							</div>
+							<div class="itemContent">
+								<div class="charts" id="lwgfbqs">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="detail" :class="{active:contentToggle=='13'}" id="content13">
+					<div class="fullscreen"><img src="img/content/fullscreen.png"/></div>
+					<div class="list">
+						<div class="item">
+							<div class="itemTitle">
+								<span class="datetime">2018年 4月</span>
+								<span class="title">工资发放情况</span>
+								<span class="youhua"><img src="img/content/youhua.png"/></span>
+							</div>
+							<div class="itemContent">
+								
+								<div class="charts" id="gzffqk">
+									
+								</div>
+								
+							</div>
+						</div>
+						
+						
+						<div class="item">
+							<div class="itemTitle">
+								<span class="datetime">2018年 4月</span>
+								<span class="title">历年延迟发放薪资项目分布趋势</span>
+								<span class="youhua"><img src="img/content/youhua.png"/></span>
+							</div>
+							<div class="itemContent">
+								<div class="charts" id="xmfbqs">
+									
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="itemTitle">
+							
+								<span class="title" style="width: 65%;text-align: right;">历年工人平均工资走势</span>
+								<span class="youhua"><img src="img/content/youhua.png"/></span>
+							</div>
+							<div class="itemContent">
+								<div class="charts" id="pjgzzs">
+									
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+
+		<div class="tabContent" :class="{active:partToggle[1]}" id="tab2">
+			<div class="close"></div>
+			<div class="tabMain">
+				<div class="tabTitle">
+					<div class="left">
+						<span @click="toggleDetail('21')" class="button" :class="{active:contentToggle=='21'}"><span>务工人员工资拨付预警</span></span>
+						<span @click="toggleDetail('22')" class="button" :class="{active:contentToggle=='22'}"><span>工资专用账户相关预警</span></span>
+						<span @click="toggleDetail('23')" class="button" :class="{active:contentToggle=='23'}"><span>从业人员实名制异常预警</span></span>
+						<span @click="toggleDetail('24')" class="button" :class="{active:contentToggle=='24'}"><span>参建主体异常预警</span></span>
+						
+					</div>
+					<div class="right">
+						<span class="button fullscreen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+						<span class="button alert"><span>收起详情</span></span>
+					</div>
+				</div>
+				<div class="detail" :class="{active:contentToggle=='21'}" id="content21">
+					<div class="fullscreen"><img src="img/content/fullscreen.png"/></div>
+					<div class="list">
+						<div class="tableHeader">
+							<div class="search">
+								<input placeholder="支持模糊搜索项目名、预警对象等关键词" type="text" name="" id="" value="" />
+							</div>
+							<div class="more">
+								更多筛选
+							</div>
+							<div class="tableCheck row">
+								<input type="checkbox" id="simple_3">
+    							<label for="simple_3" class="green"></label>
+							</div>
+							
+							<div class="datetime">
+								<span><input id="datetimepicker1" type="text" ></span>
+								-- <span><input id="datetimepicker2" type="text" ></span>
+							</div>
+							
+							<div class="alertButton">
+								预警参数设置 >
+							</div>
+						</div>
+						<div class="tableMain">
+							<table class="tableContent" border="1"  cellspacing="0" cellpadding="10" bordercolor="#ccc" >
+								<tr class="thaader">
+									<th>序号</th>
+									<th>预警等级</th>
+									<th>预警类型</th>
+									<th>预警时间</th>
+									<th>项目名称</th>
+									<th>预警对象</th>
+									<th>预警状态</th>
+									<th>预警描述</th>
+								</tr>
+								<tr v-for='item in alertContent' class="tItem" :class="{active:item.state=='待处理'}">
+									<td>{{item.id}}</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>{{item.state}}</td>
+									<td></td>
+								</tr>
+							</table>
+							<div class="clickMore" :class="{active:seeMoreButton}"  @click='seeMore'>
+								<img src="img/content/clickMore.png"/>
+								<span>点击查看历史全部</span>
+							</div>
+							<div class="zxf_pagediv" :class="{active:seeMoreButton}"></div>
+
+						</div>
+						
+						
+					</div>
+				</div>
+				
+				<div class="detail" :class="{active:contentToggle=='22'}" id="content22">
+					<div class="fullscreen"><img src="img/content/fullscreen.png"/></div>
+					<div class="list">
+						<div class="tableHeader">
+							<div class="search">
+								<input placeholder="支持模糊搜索项目名、预警对象等关键词" type="text" name="" id="" value="" />
+							</div>
+							<div class="more">
+								更多筛选
+							</div>
+							<div class="tableCheck row">
+								<input type="checkbox" id="simple_3">
+    							<label for="simple_3" class="green"></label>
+							</div>
+							
+							<div class="datetime">
+								<span><input id="datetimepicker1" type="text" ></span>
+								-- <span><input id="datetimepicker2" type="text" ></span>
+							</div>
+							
+							<div class="alertButton">
+								预警参数设置 >
+							</div>
+						</div>
+						<div class="tableMain">
+							<table class="tableContent" border="1"  cellspacing="0" cellpadding="10" bordercolor="#ccc" >
+								<tr class="thaader">
+									<th>序号</th>
+									<th>预警等级</th>
+									<th>预警类型</th>
+									<th>预警时间</th>
+									<th>项目名称</th>
+									<th>预警对象</th>
+									<th>预警状态</th>
+									<th>预警描述</th>
+								</tr>
+								<tr v-for='item in alertContent' class="tItem" :class="{active:item.state=='待处理'}">
+									<td>{{item.id}}</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>{{item.state}}</td>
+									<td></td>
+								</tr>
+							</table>
+							<div class="clickMore" :class="{active:seeMoreButton}"  @click='seeMore'>
+								<img src="img/content/clickMore.png"/>
+								<span>点击查看历史全部</span>
+							</div>
+							<div class="zxf_pagediv" :class="{active:seeMoreButton}"></div>
+
+						</div>
+						
+						
+					</div>
+				</div>
+				
+				<div class="detail" :class="{active:contentToggle=='23'}" id="content23">
+					<div class="fullscreen"><img src="img/content/fullscreen.png"/></div>
+					<div class="list">
+						<div class="tableHeader">
+							<div class="search">
+								<input placeholder="支持模糊搜索项目名、预警对象等关键词" type="text" name="" id="" value="" />
+							</div>
+							<div class="more">
+								更多筛选
+							</div>
+							<div class="tableCheck row">
+								<input type="checkbox" id="simple_3">
+    							<label for="simple_3" class="green"></label>
+							</div>
+							
+							<div class="datetime">
+								<span><input id="datetimepicker1" type="text" ></span>
+								-- <span><input id="datetimepicker2" type="text" ></span>
+							</div>
+							
+							<div class="alertButton">
+								预警参数设置 >
+							</div>
+						</div>
+						<div class="tableMain">
+							<table class="tableContent" border="1"  cellspacing="0" cellpadding="10" bordercolor="#ccc" >
+								<tr class="thaader">
+									<th>序号</th>
+									<th>预警等级</th>
+									<th>预警类型</th>
+									<th>预警时间</th>
+									<th>项目名称</th>
+									<th>预警对象</th>
+									<th>预警状态</th>
+									<th>预警描述</th>
+								</tr>
+								<tr v-for='item in alertContent' class="tItem" :class="{active:item.state=='待处理'}">
+									<td>{{item.id}}</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>{{item.state}}</td>
+									<td></td>
+								</tr>
+							</table>
+							<div class="clickMore" :class="{active:seeMoreButton}"  @click='seeMore'>
+								<img src="img/content/clickMore.png"/>
+								<span>点击查看历史全部</span>
+							</div>
+							<div class="zxf_pagediv" :class="{active:seeMoreButton}"></div>
+
+						</div>
+						
+						
+					</div>
+				</div>
+				
+				<div class="detail" :class="{active:contentToggle=='24'}" id="content24">
+					<div class="fullscreen"><img src="img/content/fullscreen.png"/></div>
+					<div class="list">
+						<div class="tableHeader">
+							<div class="search">
+								<input placeholder="支持模糊搜索项目名、预警对象等关键词" type="text" name="" id="" value="" />
+							</div>
+							<div class="more">
+								更多筛选
+							</div>
+							<div class="tableCheck row">
+								<input type="checkbox" id="simple_3">
+    							<label for="simple_3" class="green"></label>
+							</div>
+							
+							<div class="datetime">
+								<span><input id="datetimepicker1" type="text" ></span>
+								-- <span><input id="datetimepicker2" type="text" ></span>
+							</div>
+							
+							<div class="alertButton">
+								预警参数设置 >
+							</div>
+						</div>
+						<div class="tableMain">
+							<table class="tableContent" border="1"  cellspacing="0" cellpadding="10" bordercolor="#ccc" >
+								<tr class="thaader">
+									<th>序号</th>
+									<th>预警等级</th>
+									<th>预警类型</th>
+									<th>预警时间</th>
+									<th>项目名称</th>
+									<th>预警对象</th>
+									<th>预警状态</th>
+									<th>预警描述</th>
+								</tr>
+								<tr v-for='item in alertContent' class="tItem" :class="{active:item.state=='待处理'}">
+									<td>{{item.id}}</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>{{item.state}}</td>
+									<td></td>
+								</tr>
+							</table>
+							<div class="clickMore" :class="{active:seeMoreButton}"  @click='seeMore'>
+								<img src="img/content/clickMore.png"/>
+								<span>点击查看历史全部</span>
+							</div>
+							<div class="zxf_pagediv" :class="{active:seeMoreButton}"></div>
+
+						</div>
+						
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+
+		<div class="speedoffice" :class="{active:tabToggle}">
+			<div class="title">
+				<img src="img/office.png" alt="" />
+				<span class="title">快捷办公</span>
+				<span class="small">这里显示所有类别下您最常用功能</span>
+			</div>
+			<div class="contentall">
+				<div class="content">
+					<div class="item">
+						<div class="graphic bintu"></div>
+						<span>实名制实施统计</span>
+					</div>
+					<div class="item">
+						<div class="graphic t2"></div>
+						<span>异动项目占比</span>
+					</div>
+					<div class="item">
+						<div class="graphic b">
+							<div class="bar">
+								<div class="number">50%</div>
+								<div class="smallbar">
+									<div class="whitebar"></div>
+								</div>
+							</div>
+						</div>
+						<span>项目管理人员考勤情况</span>
+					</div>
+					<div class="item">
+						<div class="graphic"></div>
+						<span></span>
+					</div>
+				</div>
+				<div class="content">
+					<div class="item">
+						<div class="graphic"></div>
+						<span></span>
+					</div>
+					<div class="item">
+						<div class="graphic"></div>
+						<span></span>
+					</div>
+					<div class="item">
+						<div class="graphic"></div>
+						<span></span>
+					</div>
+					<div class="item">
+						<div class="graphic"></div>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div>技术支持：腾晖科技（430613） <a href="http://www.thsoft.cc">www.thsoft.cc</a></div>
+			
+		</div>
+		</div>
+		
+		
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script src="js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/highcharts-more.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/exporting.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/solid-gauge.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		
+		<script src="js/page.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/charts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/charts2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/charts3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+</html>

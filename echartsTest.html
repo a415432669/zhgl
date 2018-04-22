@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       
+	</head>
+	<body>
+		<div style="width: 800px; height: 600px; margin: 0 auto;" id="chart1"></div>
+		
+		
+	<script type="text/javascript">
+		var myChart = echarts.init(document.getElementById('chart1'));
+
+        // 指定图表的配置项和数据
+        var option = option = {
+		    tooltip: {
+		        trigger: 'item',
+		        formatter: '{b}'
+		    },
+		    series: [
+		        {
+		            name: '中国',
+		            type: 'map',
+		            mapType: 'china',
+		            selectedMode : 'multiple',
+		            label: {
+		                normal: {
+		                    show: true
+		                },
+		                emphasis: {
+		                    show: true
+		                }
+		            },
+		            data:[
+		                {name:'广东', selected:true}
+		            ]
+		        }
+		    ]
+		};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+	</script>	
+	</body>
+</html>

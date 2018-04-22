@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="renderer" content="webkit"/>
+		<meta name="force-rendering" content="webkit"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+		<!--[if lt IE 11]> 
+		<script>/*@cc_on window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script> 
+		<![endif]--> 
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tongji.css"/>
+	</head>
+	<body>
+		<div id="app">
+		<div class="header" id="header">
+			<div class="logo">
+				<img src="img/logo.png"/>
+				<span>建设领域务工人员信息化综合管理平台 - 雄安</span>
+			</div>
+			<div class="search">
+				<input type="" name="" id="" value="" />
+				<img src="img/search.png"/>
+			</div>
+			<div class="config">
+				<span><img src="img/config.png"/></span>
+				<span><img src="img/fullscreen.png"/></span>
+				<span><img src="img/loginOut.png"/></span>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="list">
+				<div class="item">
+					<span class="title">分析与预警</span>
+					<span class="img"><img src="img/alert.png" alt="" /></span>
+				</div>
+				<div class="item">
+					<span class="title">项目管理</span>
+					<span class="img"><img src="img/project.png" alt="" /></span>
+				</div>
+				<div class="item">
+					<span class="title">人员管理</span>
+					<span class="img"><img src="img/man.png" alt="" /></span>
+				</div>
+				<div class="item">
+					<span class="title">诚信积分</span>
+					<span class="img"><img src="img/chenxin.png" alt="" /></span>
+				</div>
+				<div class="item">
+					<span class="title">监督管理</span>
+					<span class="img"><img src="img/jiandu.png" alt="" /></span>
+				</div>
+			</div>
+		</div>
+		<div class="moduleAll" :class="{active:tabToggle,tab1:partToggle[0],tab2:partToggle[1]}">
+			<div class="module">
+				<div class="part p1" :class="{active:partToggle[0]}" @click="tabClick(0)">
+					<div class="title">
+						<div class="icon"><img src="img/tongji.png"/></div>
+						<span>统计分析</span>
+					</div>
+					<div class="changyong">
+						<div class="title">常用</div>
+						<div class="content">
+							<div class="item">
+								<img src="img/zhuzhuang.png"/>
+								<span>柱状图标题</span>
+							</div>
+							<div class="item">
+								<img src="img/zhuzhuang.png"/>
+								<span>柱状图标题</span>
+							</div>
+						</div>
+					</div>
+					<div class="detail">
+						<span>项目统计分析</span>
+						<span>务工人员相关统计</span>
+						<span>务工人员薪资状况统计</span>
+					</div>
+				</div>
+				<div class="part p2" :class="{active:partToggle[1]}" @click="tabClick(1)">
+					<div class="title">
+						<div class="icon"><img src="img/yujing.png"/></div>
+						<span>预警管理</span>
+					</div>
+					<div class="changyong">
+						<div class="title">常用</div>
+						<div class="content">
+							<div class="item">
+								<img src="img/zhuzhuang.png"/>
+								<span>异动项目占比</span>
+							</div>
+							<div class="item">
+								<img src="img/zhuzhuang.png"/>
+								<span>圆环图标题</span>
+							</div>
+						</div>
+					</div>
+					<div class="detail">
+						<span>务工人员工资拨付预警</span>
+						<span>工资专用账户相关预警</span>
+						<span>从业人员实名制异常预警</span>
+						<span>参建主题异常预警</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tabContent">
+			<div class="close"></div>
+			<div class="tabTitle">
+				<div class="left">
+					<span class="button"><span>务工人员工资拨付预警</span></span>
+					<span class="button">工资专用账户相关预警</span>
+					<span class="button">从业人员实名制异常预警</span>
+					<span class="button">参建主体异常预警</span>
+				</div>
+				<div class="right">
+					<span class="button"></span>
+					<span class="button">收起详情</span>
+				</div>
+			</div>
+			<div class="detail">
+				<div class="fullscreen"></div>
+				<div class="list">
+					<div class="item">
+						<div class="itemTitle"></div>
+						<div class="itemContent"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="speedoffice">
+			<div class="title">
+				<img src="img/office.png" alt="" />
+				<span class="title">快捷办公</span>
+				<span class="small">这里显示所有类别下您最常用功能</span>
+			</div>
+			<div class="contentall">
+				<div class="content">
+					<div class="item">
+						<div class="graphic bintu"></div>
+						<span>实名制实施统计</span>
+					</div>
+					<div class="item">
+						<div class="graphic t2"></div>
+						<span>异动项目占比</span>
+					</div>
+					<div class="item">
+						<div class="graphic b">
+							<div class="bar">
+								<div class="number">50%</div>
+								<div class="smallbar">
+									<div class="whitebar"></div>
+								</div>
+							</div>
+						</div>
+						<span>项目管理人员考勤情况</span>
+					</div>
+					<div class="item">
+						<div class="graphic"></div>
+						<span></span>
+					</div>
+				</div>
+				<div class="content">
+					<div class="item">
+						<div class="graphic"></div>
+						<span></span>
+					</div>
+					<div class="item">
+						<div class="graphic"></div>
+						<span></span>
+					</div>
+					<div class="item">
+						<div class="graphic"></div>
+						<span></span>
+					</div>
+					<div class="item">
+						<div class="graphic"></div>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div>技术支持：腾晖科技（430613） <a href="http://www.thsoft.cc">www.thsoft.cc</a></div>
+			
+		</div>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/charts.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

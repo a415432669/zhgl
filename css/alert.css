@@ -1,0 +1,159 @@
+#tab2 .tabMain>.detail>.list{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.tabMain>.detail>.list>.tableHeader{
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.tabMain>.detail>.list>.tableHeader>.search{
+	width: 380px;
+	height: 40px;
+	border: 2px solid #ccc;
+	background: #fff;
+}
+.tabMain>.detail>.list>.tableHeader>.search>input{
+	width: 100%;
+	padding: 0 20px;
+	font-size: 16px;
+	
+}
+.tabMain>.detail>.list>.tableHeader>.more{
+	padding: 0 20px;
+	font-weight: 700;
+}
+
+.tableCheck.row {
+    width: 100px;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+}
+#simple_3:checked + label:before{
+	font-size: 6px;
+	position: absolute;
+	content: '展开';
+	color: #fff;
+	top: -20px;
+	left: 6px;
+}
+.tableCheck input[type="checkbox"] {
+    display: none;
+}
+.tableCheck input[type="checkbox"] + label {
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    position: relative;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    margin: 0px 20px;
+    box-sizing: border-box;
+}
+.tableCheck input[type="checkbox"] + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#simple_3:checked + label.green {
+    background: #597986;
+}
+#simple_3:checked + label.green:after {
+    background: #fff;
+}
+#simple_3:checked + label:after {
+    left: calc(100% - 20px);
+}
+#simple_3 + label {
+    background: #ddd;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px #aaa;
+}
+#simple_3 + label:after {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px #aaa;
+}
+
+#tab2 .tableHeader>.datetime{
+	width: 320px;
+	height: 40px;
+}
+#tab2 .tableHeader>.datetime>span{
+	display: inline-block;
+	position: relative;
+	width: 140px;
+	height: 40px;
+}
+#tab2 .tableHeader>.datetime input{
+	width: 140px;
+	height: 40px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+}
+#tab2 .tableHeader>.datetime>span:after{
+	width: 40px;
+	height: 40px;
+	content: "";
+	display: block;
+	position: absolute;
+	background-image: url(../img/content/rili.png);
+	background-size: 20px 20px;
+	background-position: center;
+	top: 0px;
+	right: 3px;
+	background-repeat: no-repeat;
+	
+}
+
+
+#tab2 .tableHeader>.alertButton{
+	height: 40px;
+	width: 140px;
+	background: #F44E4E;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 5px;
+}
+
+#tab2 .tableMain{
+	margin-top: 40px;
+}
+#tab2 .tableMain>table.tableContent{
+	width: 100%;
+	text-align: center;
+	border-top-radius: 5px;
+}
+th,td{
+	padding: 10px 0;
+}
+tr.active{
+	background: #FDD856;
+}
+
+#tab2 .clickMore{
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #ccc;
+	border-top: none;
+	border-bottom-radius: 5px;
+}
+#tab2 .clickMore>img{
+	width: 25px;
+	height: 25px;
+}
+#tab2 .clickMore.active{
+	display: none;
+}

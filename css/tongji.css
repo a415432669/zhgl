@@ -1,0 +1,156 @@
+.tabContent{
+	width: 100%;
+	min-width: 1200px;
+	background: #fff;
+	margin-top: 25px;
+	padding-bottom: 10px;
+	display: none;
+}
+
+.tabContent.active{
+	display: block;
+}
+.tabContent>.close{
+	background-image: url(../img/content/xiahua.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 50px;
+	background-size: 33px 17.5px;
+}
+
+.tabContent>.tabMain>.tabTitle{
+	display: flex;
+	height: 60px;
+	align-items: center;
+	justify-content: space-between;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.tabContent>.tabMain>.tabTitle .button{
+	padding: 10px 10px;
+	position: relative;
+	margin-left: 20px;
+}
+.tabContent>.tabMain>.tabTitle .button:before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #F1F1F1;
+	transform: skewX(-30deg);
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.tabContent>.tabMain>.tabTitle .button>span{
+	position: relative;
+	z-index: 1;
+	font-size: 16px;
+}
+.tabContent>.tabMain>.tabTitle .button.active:before{
+	background: #FED857;
+}
+.tabContent>.tabMain>.tabTitle .button.alert:before{
+	background: #F54F4F;
+}
+.tabContent>.tabMain>.tabTitle .button.fullscreen>span{
+	background-image: url(../img/content/fullscreen.png);
+	background-size: 22px 22px;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+
+
+.tabContent>.tabMain>.detail{
+	width: 1200px;
+	margin: 0 auto;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+	padding: 40px;
+	position: relative;
+	display: none
+	
+}
+.tabContent>.tabMain>.detail.active{
+	display: block;
+}
+.tabContent>.tabMain>.detail .fullscreen>img{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 22px;
+	height: 22px;
+}
+#tab1.tabContent>.tabMain>.detail>.list{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.tabContent>.tabMain>.detail>.list>.item{
+	width: 500px;
+	height: 300px;
+	background: #F1F1F1;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+.tabContent>.tabMain>.detail>.list>.item>.itemTitle{
+	height: 60px;
+	border-bottom: 2px solid #fff;
+	display: flex;
+	justify-content: space-between;
+}
+.tabContent>.tabMain>.detail>.list>.item>.itemTitle>span{
+	display: inline-block;
+	line-height: 60px;
+}
+.tabContent>.tabMain>.detail>.list>.item>.itemTitle>.datetime{
+	font-size: 12px;
+	color: #999;
+	padding-left: 10px;
+	width: 25%;
+}
+.tabContent>.tabMain>.detail>.list>.item>.itemTitle>.title{
+	font-weight:900 ;
+	text-align: center;
+	width: 50%;
+}
+.tabContent>.tabMain>.detail>.list>.item>.itemTitle>.youhua{
+	text-align: right;
+	padding-right: 10px;
+	width: 25%;
+}
+.tabContent>.tabMain>.detail>.list>.item>.itemTitle>.youhua>img{
+	height: 20px;
+}
+.tabContent>.tabMain>.detail>.list>.item>.itemContent{
+	display: flex;
+}
+.tabContent>.tabMain>.detail>.list>.item>.itemContent>div{
+	/*width: 50%;*/
+	width: 100%;
+	height: 240px;
+}
+
+
+
+
+
+#gzffqk{
+	position: relative;
+}
+#gzffqk:before{
+	content: '实发工资';
+	position: absolute;
+	bottom: 20px;
+	left: 95px;
+}
+#gzffqk:after{
+	content: '应发工资';
+	position: absolute;
+	bottom: 20px;
+	right: 95px;
+}
+
