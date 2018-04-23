@@ -117,14 +117,14 @@ $(".zxf_pagediv").createPage({
 		console.log(e);//回调
 	}
 });
-if($(window).scrollTop()>=650){
+if($(window).scrollTop()>=450){
 		$('.nav').addClass('active')	
 	}else{
 		$('.nav').removeClass('active')
 }
 
 $(window).scroll(function(event){
-	if($(window).scrollTop()>=650){
+	if($(window).scrollTop()>=450){
 		$('.nav').addClass('active')	
 	}else{
 		$('.nav').removeClass('active')
@@ -149,7 +149,7 @@ $('.fullscreen').click(function(){
 })
 
 $('#fullscreen').click(function(){
-	document.body.webkitRequestFullscreen()
+	document.documentElement.webkitRequestFullScreen()
 })
 
 

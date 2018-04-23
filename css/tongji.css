@@ -160,7 +160,7 @@
 }
 
 
-.config,#fullscreen,.fullscreen,.list>.item,.loginOut,.button,.alertButton,.close,.part,.backTop,.searchImg{
+.config,#fullscreen,.fullscreen,.list>.item,.loginOut,.button,.alertButton,.close,.part,.backTop,.searchImg,.nav>.navList>span{
 	cursor: pointer;
 }
 

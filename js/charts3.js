@@ -274,8 +274,30 @@ window.onload = function(){
 					drawArc(cxt1,46,0,2*Math.PI*c4,'#e73451',img2)
 					drawFont(cxt1,"已发工资",-28,-10,12)
 					drawFont(cxt1,"76",-15,16,24)
+					
+					
+					drawFont(cxt1,"在建项目",100,-65,12)
+					drawFont(cxt1,"所有项目",-130,-100,12)
+					drawFont(cxt1,"已实名项目",90,-100,12)
+					
+					
+					drawLine(cxt1,-95,-95,-72,-72)
+					drawLine(cxt1,44,-44,95,-95)
+					drawLine(cxt1,77,-30,108,-60)
+					
+					
+					
+					
+					
+					
+					
 					drawArc2(cxt2,100,0,-2*Math.PI*c5,'#ffd857',img3)
 					drawArc2(cxt2,64,0,-2*Math.PI*c6,'#557874',img3)
+					
+					
+					
+					
+					
 					cxt2.save()
 					cxt2.translate(150,125)
 					cxt2.beginPath()
@@ -308,6 +330,19 @@ window.onload = function(){
 					cxt2.beginPath()
 					cxt2.moveTo(90,-80)
 					cxt2.lineTo(77,-60)
+					cxt2.strokeStyle = '#000'
+					cxt2.lineWidth = 1
+					cxt2.stroke()
+					cxt2.closePath()
+					cxt2.restore()
+		}
+		
+		function drawLine(cxt2,x1,y1,x2,y2){
+					cxt2.save()
+					cxt2.translate(150,125)
+					cxt2.beginPath()
+					cxt2.moveTo(x1,y1)
+					cxt2.lineTo(x2,y2)
 					cxt2.strokeStyle = '#000'
 					cxt2.lineWidth = 1
 					cxt2.stroke()

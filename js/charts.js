@@ -28,16 +28,16 @@ option = {
     },
     series : [
         {
-            name:'访问来源',
+            name:'实名制实施统计',
             type:'pie',
             radius : '55%',
             center: ['50%', '50%'],
             data:[
-                {value:335, name:'直接访问'},
-                {value:310, name:'邮件营销'},
-                {value:274, name:'联盟广告'},
-                {value:235, name:'视频广告'},
-                {value:400, name:'搜索引擎'}
+                {value:335, name:'已实名制人数'},
+                {value:310, name:'未实名制人数'},
+                {value:274, name:'申请实名制人数'},
+                {value:235, name:'审核实名制人数'},
+                {value:400, name:'准备实名制人数'}
             ].sort(function (a, b) { return a.value - b.value; }),
             roseType: 'radius',
             label: {
@@ -91,34 +91,34 @@ option2 = {
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
     backgroundColor:'#ffffff',
-    color:['#fed857','#ff0000'],
+    color:['#fed857','#E0E0E0'],
     series: [
         {
-            name:'访问来源',
+            name:'异动项目占比',
             type:'pie',
             radius: ['50%', '70%'],
             avoidLabelOverlap: false,
-            label: {
-                normal: {
-                    show: false,
-                    position: 'center'
-                },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '30',
-                        fontWeight: 'bold'
-                    }
-                }
-            },
+//          label: {
+//              normal: {
+//                  show: false,
+//                  position: 'center'
+//              },
+//              emphasis: {
+//                  show: true,
+//                  textStyle: {
+//                      fontSize: '30',
+//                      fontWeight: 'bold'
+//                  }
+//              }
+//          },
             labelLine: {
                 normal: {
                     show: false
                 }
             },
             data:[
-                {value:335, name:'直接访问'},
-                {value:90, name:'邮件营销'},
+                {value:335, name:'正常项目'},
+                {value:90, name:'异动项目'},
             ]
         }
     ]

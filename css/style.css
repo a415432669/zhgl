@@ -239,7 +239,8 @@ html,body{
 	font-size: 25px;
 }
 .module>.p1>.changyong>.content{
-	margin-top: 20px;
+	/*margin-top: 20px;*/
+	width: 100%;
 	display: flex;
 	padding-bottom: 20px;
 	/*border-bottom: 2px solid #ccc;*/

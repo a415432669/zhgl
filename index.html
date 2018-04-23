@@ -54,7 +54,7 @@
 		</div>
 		<div class="banner">
 			<div class="list">
-				<div class="item" :class="{active:tabToggle}">
+				<div class="item active">
 					<span class="title">分析与预警</span>
 					<span class="img"><img src="img/alert.png" alt="" /></span>
 				</div>
@@ -86,11 +86,11 @@
 					<div class="changyong">
 						
 						<div class="content">
-							<div style="width: 300px; height: 250px; margin: 0 auto;text-align: center;">
+							<div style="width: 350px; height: 250px; margin: 0 auto;text-align: center;">
 								<h3>管理人员动态一览</h3>
 								<canvas id="canvas2" width="300" height="250"></canvas>
 </div>
-	<div style="width: 300px; height: 350px; margin: 0 auto;text-align: center;">
+	<div style="width: 350px; height: 250px; margin: 0 auto;text-align: center;">
 		<h3>项目情况预览</h3>
 		<canvas id="canvas1" width="300" height="250"></canvas>
 </div>
@@ -153,7 +153,7 @@
 		</div>
 
 		<div class="tabContent" :class="{active:partToggle[0]}" id="tab1">
-			<div class="close"></div>
+			<div class="close" @click="tabClick(0)"></div>
 			<div class="tabMain">
 				<div class="tabTitle">
 					<div class="left">
@@ -333,7 +333,7 @@
 
 
 		<div class="tabContent" :class="{active:partToggle[1]}" id="tab2">
-			<div class="close"></div>
+			<div class="close" @click="tabClick(1)"></div>
 			<div class="tabMain">
 				<div class="tabTitle">
 					<div class="left">
