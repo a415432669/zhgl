@@ -276,9 +276,9 @@ window.onload = function(){
 					drawFont(cxt1,"76",-15,16,24)
 					
 					
-					drawFont(cxt1,"在建项目",100,-65,12)
-					drawFont(cxt1,"所有项目",-130,-100,12)
-					drawFont(cxt1,"已实名项目",90,-100,12)
+					drawFont(cxt1,"在建项目:160",77,-65,12)
+					drawFont(cxt1,"所有项目:200",-130,-100,12)
+					drawFont(cxt1,"已实名项目:120",63,-100,12)
 					
 					
 					drawLine(cxt1,-95,-95,-72,-72)
