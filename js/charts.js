@@ -208,12 +208,15 @@ function drawChart4(){
 var chart4 = echarts.init(document.querySelector('#xmyd'))
 
 var option4 = {
-    color: ['#3398DB'],
+    color: ['#aac6ca','#55787e','#ffd857'],
     tooltip : {
         trigger: 'axis',
         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
             type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
         }
+    },
+    legend: {
+        data:['无人员','无考勤','无工资发放']
     },
     grid: {
         left: '3%',
@@ -237,10 +240,31 @@ var option4 = {
     ],
     series : [
         {
-            name:'项目异动',
+            name:'无人员',
             type:'bar',
+            stack: '总量',
             barWidth: '60%',
-            data:[5, 3, 1],
+            data:[5, '-', '-'],
+            label:{
+            	formatter: "{b}:{c}个{a}\n占比:{d}%"
+            }
+        },
+        {
+            name:'无考勤',
+            type:'bar',
+            stack: '总量',
+            barWidth: '60%',
+            data:['-', 3, '-'],
+            label:{
+            	formatter: "{b}:{c}个{a}\n占比:{d}%"
+            }
+        },
+        {
+            name:'无工资发放',
+            type:'bar',
+            stack: '总量',
+            barWidth: '60%',
+            data:['-', '-', 1],
             label:{
             	formatter: "{b}:{c}个{a}\n占比:{d}%"
             }

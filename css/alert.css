@@ -21,15 +21,22 @@
 	font-size: 16px;
 	
 }
-.tabMain>.detail>.list>.tableHeader>.more{
+
+.tableCheck.row:before{
+	content:'更多筛选';
+	width: 100px;
 	padding: 0 20px;
 	font-weight: 700;
+	position: absolute;
+	left: -85px;
+    top: 5px;
 }
 
 .tableCheck.row {
+	position: relative;
     width: 100px;
     display: block;
-    line-height: 60px;
+    /*line-height: 60px;*/
     text-align: center;
 }
 #simple_3:checked + label:before{
@@ -37,7 +44,7 @@
 	position: absolute;
 	content: '展开';
 	color: #fff;
-	top: -20px;
+	top: -16px;
 	left: 6px;
 }
 .tableCheck input[type="checkbox"] {
@@ -46,11 +53,11 @@
 .tableCheck input[type="checkbox"] + label {
     display: inline-block;
     width: 60px;
-    height: 20px;
+    height: 30px;
     position: relative;
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    margin: 0px 20px;
+    margin: 0px 30px;
     box-sizing: border-box;
 }
 .tableCheck input[type="checkbox"] + label:after {
@@ -59,8 +66,8 @@
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     cursor: pointer;
@@ -72,11 +79,11 @@
     background: #fff;
 }
 #simple_3:checked + label:after {
-    left: calc(100% - 20px);
+    left: calc(100% - 30px);
 }
 #simple_3 + label {
     background: #ddd;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 1px 1px 3px #aaa;
 }
 #simple_3 + label:after {
@@ -88,6 +95,7 @@
 #tab2 .tableHeader>.datetime{
 	width: 320px;
 	height: 40px;
+	display: none;
 }
 #tab2 .tableHeader>.datetime>span{
 	display: inline-block;

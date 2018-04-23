@@ -151,3 +151,8 @@ $('.fullscreen').click(function(){
 $('#fullscreen').click(function(){
 	document.body.webkitRequestFullscreen()
 })
+
+
+$('#simple_3').change(function(){
+	$('.datetime').fadeToggle()
+})

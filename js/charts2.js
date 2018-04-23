@@ -238,7 +238,8 @@ function drawChart10(){
             },
             center:['75%','50%']
         }
-    ]
+    ],
+    animationDuration:4000
 };
 
 	

@@ -25,16 +25,20 @@
 				<span style="display: inline-block;height: 110px;margin: 0 40px;
     line-height: 110px;
     padding: 0 10px;
-    background: #FFD857;">雄安</span>
+    background: #FFD857;cursor: pointer;">雄安</span>
 			</div>
+			<div class="" style="display: flex;">
+				
+			
 			<div class="search">
 				<input placeholder="全局搜索输入框" type="" name="" id="" value="" />
-				<img src="img/search.png"/>
+				<img class="searchImg" src="img/search.png"/>
 			</div>
 			<div class="config">
 				<span><img src="img/config.png"/></span>
 				<span id="fullscreen"><img src="img/fullscreen.png"/></span>
-				<span class="loginOut"><img src="img/loginOut.png"/></span>
+				<span class="loginOut"><a href="login.html"><img src="img/loginOut.png"/></a></span>
+			</div>
 			</div>
 		</div>
 		<div class="nav">
@@ -50,7 +54,7 @@
 		</div>
 		<div class="banner">
 			<div class="list">
-				<div class="item">
+				<div class="item" :class="{active:tabToggle}">
 					<span class="title">分析与预警</span>
 					<span class="img"><img src="img/alert.png" alt="" /></span>
 				</div>
@@ -351,9 +355,7 @@
 							<div class="search">
 								<input placeholder="支持模糊搜索项目名、预警对象等关键词" type="text" name="" id="" value="" />
 							</div>
-							<div class="more">
-								更多筛选
-							</div>
+							
 							<div class="tableCheck row">
 								<input type="checkbox" id="simple_3">
     							<label for="simple_3" class="green"></label>
@@ -410,9 +412,7 @@
 							<div class="search">
 								<input placeholder="支持模糊搜索项目名、预警对象等关键词" type="text" name="" id="" value="" />
 							</div>
-							<div class="more">
-								更多筛选
-							</div>
+							
 							<div class="tableCheck row">
 								<input type="checkbox" id="simple_3">
     							<label for="simple_3" class="green"></label>
@@ -469,9 +469,7 @@
 							<div class="search">
 								<input placeholder="支持模糊搜索项目名、预警对象等关键词" type="text" name="" id="" value="" />
 							</div>
-							<div class="more">
-								更多筛选
-							</div>
+							
 							<div class="tableCheck row">
 								<input type="checkbox" id="simple_3">
     							<label for="simple_3" class="green"></label>
@@ -528,9 +526,7 @@
 							<div class="search">
 								<input placeholder="支持模糊搜索项目名、预警对象等关键词" type="text" name="" id="" value="" />
 							</div>
-							<div class="more">
-								更多筛选
-							</div>
+							
 							<div class="tableCheck row">
 								<input type="checkbox" id="simple_3">
     							<label for="simple_3" class="green"></label>
