@@ -1,10 +1,10 @@
 var app = new Vue({
 				el:'#app',
 				data:{
-					tabToggle:true,
-					partToggle:[false,true],
+					tabToggle:false,
+					partToggle:[false,false],
 					name:'hello',
-					contentToggle:'21',
+					contentToggle:'11',
 					alertContent:[{id:1,state:'待处理'},{id:2,state:'待处理'}],
 					seeMoreButton:false
 				},
@@ -146,4 +146,8 @@ $('.fullscreen').click(function(){
 	}
 //	console.log([this])
 //	this.requestFullscreen()
+})
+
+$('#fullscreen').click(function(){
+	document.body.webkitRequestFullscreen()
 })
