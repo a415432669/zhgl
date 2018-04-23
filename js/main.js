@@ -50,8 +50,8 @@ var app = new Vue({
 				},
 				mounted:function(){
 					showChart('kj')
-					mainChart1()
-					mainChart2()
+//					mainChart1()
+//					mainChart2()
 					
 				}
 			})

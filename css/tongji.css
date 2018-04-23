@@ -1,6 +1,6 @@
 .tabContent{
 	width: 100%;
-	min-width: 1200px;
+	min-width: 1400px;
 	background: #fff;
 	margin-top: 25px;
 	padding-bottom: 10px;
@@ -23,7 +23,7 @@
 	height: 60px;
 	align-items: center;
 	justify-content: space-between;
-	width: 1200px;
+	width: 1400px;
 	margin: 0 auto;
 }
 
@@ -51,6 +51,7 @@
 }
 .tabContent>.tabMain>.tabTitle .button.active:before{
 	background: #FED857;
+	box-shadow: 0 0 10px #ccc;
 }
 .tabContent>.tabMain>.tabTitle .button.alert:before{
 	background: #F54F4F;
@@ -65,7 +66,7 @@
 
 
 .tabContent>.tabMain>.detail{
-	width: 1200px;
+	width: 1400px;
 	margin: 0 auto;
 	border: 2px solid #ccc;
 	border-radius: 10px;
@@ -90,7 +91,7 @@
 	flex-wrap: wrap;
 }
 .tabContent>.tabMain>.detail>.list>.item{
-	width: 500px;
+	width: 600px;
 	height: 300px;
 	background: #F1F1F1;
 	border-radius: 10px;
@@ -154,3 +155,7 @@
 	right: 95px;
 }
 
+
+input,.config,#fullscreen,.fullscreen,.list>.item,.loginOut,.button,.alertButton,.close,.part{
+	cursor: pointer;
+}

@@ -21,16 +21,20 @@
 		<div class="header" id="header">
 			<div class="logo">
 				<img src="img/logo.png"/>
-				<span>建设领域务工人员信息化综合管理平台 - 雄安</span>
+				<span>建设领域务工人员信息化综合管理平台</span>
+				<span style="display: inline-block;height: 110px;margin: 0 40px;
+    line-height: 110px;
+    padding: 0 10px;
+    background: #FFD857;">雄安</span>
 			</div>
 			<div class="search">
-				<input type="" name="" id="" value="" />
+				<input placeholder="全局搜索输入框" type="" name="" id="" value="" />
 				<img src="img/search.png"/>
 			</div>
 			<div class="config">
 				<span><img src="img/config.png"/></span>
 				<span id="fullscreen"><img src="img/fullscreen.png"/></span>
-				<span><img src="img/loginOut.png"/></span>
+				<span class="loginOut"><img src="img/loginOut.png"/></span>
 			</div>
 		</div>
 		<div class="nav">
@@ -78,9 +82,13 @@
 					<div class="changyong">
 						
 						<div class="content">
-							<div id="dtyl" style="width: 300px; height: 250px; margin: 0 auto">
+							<div style="width: 300px; height: 250px; margin: 0 auto;text-align: center;">
+								<h3>管理人员动态一览</h3>
+								<canvas id="canvas2" width="300" height="250"></canvas>
 </div>
-	<div id="qkyl" style="width: 300px; height: 250px; margin: 0 auto">
+	<div style="width: 300px; height: 350px; margin: 0 auto;text-align: center;">
+		<h3>项目情况预览</h3>
+		<canvas id="canvas1" width="300" height="250"></canvas>
 </div>
 						</div>
 					</div>
@@ -116,7 +124,7 @@
 								<span>预警时间：2018-04-16</span>
 							</div>
 							<div class="itemFooter">
-								未发工资预警
+								未发工资
 							</div>
 						</div>
 						
@@ -130,7 +138,7 @@
 								<span>预警时间：2018-04-16</span>
 							</div>
 							<div class="itemFooter">
-								工资发放名单差异预警
+								工资发放名单差异
 							</div>
 						</div>
 						
@@ -152,7 +160,7 @@
 					</div>
 					<div class="right">
 						<span class="button fullscreen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
-						<span class="button alert"><span>收起详情</span></span>
+						<span class="button alert" @click="tabClick(0)"><span>收起详情</span></span>
 					</div>
 				</div>
 				<div class="detail" :class="{active:contentToggle=='11'}" id="content11">
@@ -333,7 +341,7 @@
 					</div>
 					<div class="right">
 						<span class="button fullscreen"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
-						<span class="button alert"><span>收起详情</span></span>
+						<span class="button alert" @click="tabClick(1)"><span>收起详情</span></span>
 					</div>
 				</div>
 				<div class="detail" :class="{active:contentToggle=='21'}" id="content21">
@@ -636,7 +644,7 @@
 		
 		
 		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+		<script type="text/javascript" src="js/china.js"></script>
 		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
 		
