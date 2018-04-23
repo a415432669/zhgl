@@ -163,11 +163,11 @@ setTimeout(function(){
 						
 //						console.log(c1,c2,c3,c4,c5,c6)
 						drawTj(c1/100,c2/100,c3/100,c4/100,c5/100,c6/100)
-						all+=10
+						all+=2
 						if(all>100){
 							clearInterval(timer)
 						}
-					},100)
+					},40)
 					
 					
 					
