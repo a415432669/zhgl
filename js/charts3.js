@@ -99,7 +99,8 @@ option = {
 	chart.setOption(option)
 }
 
-setTimeout(function(){
+window.onload = function(){
+	setTimeout(function(){
 	
 	(function(){
 		var img = new Image()
@@ -317,3 +318,5 @@ setTimeout(function(){
 })()
 	
 },50)
+
+}
