@@ -28,8 +28,8 @@
 	padding: 0 20px;
 	font-weight: 700;
 	position: absolute;
-	left: -85px;
-    top: 5px;
+	left: -80px;
+    top: 7px;
 }
 
 .tableCheck.row {
@@ -55,6 +55,7 @@
     width: 60px;
     height: 30px;
     position: relative;
+    top: 2px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     margin: 0px 30px;
@@ -92,24 +93,29 @@
     box-shadow: 1px 1px 3px #aaa;
 }
 
-#tab2 .tableHeader>.datetime{
+#tab2 .tableHeader>.shuaixuan{
+	display: flex;
+	align-items: center;
+}
+
+#tab2 .tableHeader>.shuaixuan>.datetime{
 	width: 320px;
 	height: 40px;
 	display: none;
 }
-#tab2 .tableHeader>.datetime>span{
+#tab2 .tableHeader>.shuaixuan>.datetime>span{
 	display: inline-block;
 	position: relative;
 	width: 140px;
 	height: 40px;
 }
-#tab2 .tableHeader>.datetime input{
+#tab2 .tableHeader>.shuaixuan>.datetime input{
 	width: 140px;
 	height: 40px;
 	border: 2px solid #ccc;
 	border-radius: 5px;
 }
-#tab2 .tableHeader>.datetime>span:after{
+#tab2 .tableHeader>.shuaixuan>.datetime>span:after{
 	width: 40px;
 	height: 40px;
 	content: "";
