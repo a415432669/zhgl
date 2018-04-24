@@ -7,7 +7,7 @@
 	height: 40px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 .tabMain>.detail>.list>.tableHeader>.search{
 	width: 380px;
@@ -39,7 +39,7 @@
     /*line-height: 60px;*/
     text-align: center;
 }
-#simple_3:checked + label:before{
+.simple_3:checked + label:before{
 	font-size: 6px;
 	position: absolute;
 	content: '展开';
@@ -73,21 +73,23 @@
     transition: 0.3s;
     cursor: pointer;
 }
-#simple_3:checked + label.green {
+.simple_3:checked + label.green {
     background: #597986;
+
 }
-#simple_3:checked + label.green:after {
+.simple_3:checked + label.green:after {
     background: #fff;
-}
-#simple_3:checked + label:after {
     left: calc(100% - 30px);
 }
-#simple_3 + label {
+.simple_3:checked + label:after {
+    left: calc(100% - 30px);
+}
+.simple_3 + label {
     background: #ddd;
     border-radius: 30px;
     box-shadow: 1px 1px 3px #aaa;
 }
-#simple_3 + label:after {
+.simple_3 + label:after {
     background: #fff;
     border-radius: 50%;
     box-shadow: 1px 1px 3px #aaa;
@@ -96,6 +98,8 @@
 #tab2 .tableHeader>.shuaixuan{
 	display: flex;
 	align-items: center;
+	flex: 1;
+	padding-left: 100px;
 }
 
 #tab2 .tableHeader>.shuaixuan>.datetime{
