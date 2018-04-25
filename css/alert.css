@@ -7,7 +7,7 @@
 	height: 40px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 .tabMain>.detail>.list>.tableHeader>.search{
 	width: 380px;
@@ -28,8 +28,8 @@
 	padding: 0 20px;
 	font-weight: 700;
 	position: absolute;
-	left: -85px;
-    top: 5px;
+	left: -80px;
+    top: 7px;
 }
 
 .tableCheck.row {
@@ -39,7 +39,7 @@
     /*line-height: 60px;*/
     text-align: center;
 }
-#simple_3:checked + label:before{
+.simple_3:checked + label:before{
 	font-size: 6px;
 	position: absolute;
 	content: '展开';
@@ -55,6 +55,7 @@
     width: 60px;
     height: 30px;
     position: relative;
+    top: 2px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     margin: 0px 30px;
@@ -72,44 +73,53 @@
     transition: 0.3s;
     cursor: pointer;
 }
-#simple_3:checked + label.green {
+.simple_3:checked + label.green {
     background: #597986;
+
 }
-#simple_3:checked + label.green:after {
+.simple_3:checked + label.green:after {
     background: #fff;
-}
-#simple_3:checked + label:after {
     left: calc(100% - 30px);
 }
-#simple_3 + label {
+.simple_3:checked + label:after {
+    left: calc(100% - 30px);
+}
+.simple_3 + label {
     background: #ddd;
     border-radius: 30px;
     box-shadow: 1px 1px 3px #aaa;
 }
-#simple_3 + label:after {
+.simple_3 + label:after {
     background: #fff;
     border-radius: 50%;
     box-shadow: 1px 1px 3px #aaa;
 }
 
-#tab2 .tableHeader>.datetime{
+#tab2 .tableHeader>.shuaixuan{
+	display: flex;
+	align-items: center;
+	flex: 1;
+	padding-left: 100px;
+}
+
+#tab2 .tableHeader>.shuaixuan>.datetime{
 	width: 320px;
 	height: 40px;
 	display: none;
 }
-#tab2 .tableHeader>.datetime>span{
+#tab2 .tableHeader>.shuaixuan>.datetime>span{
 	display: inline-block;
 	position: relative;
 	width: 140px;
 	height: 40px;
 }
-#tab2 .tableHeader>.datetime input{
+#tab2 .tableHeader>.shuaixuan>.datetime input{
 	width: 140px;
 	height: 40px;
 	border: 2px solid #ccc;
 	border-radius: 5px;
 }
-#tab2 .tableHeader>.datetime>span:after{
+#tab2 .tableHeader>.shuaixuan>.datetime>span:after{
 	width: 40px;
 	height: 40px;
 	content: "";

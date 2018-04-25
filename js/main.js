@@ -153,6 +153,8 @@ $('#fullscreen').click(function(){
 })
 
 
-$('#simple_3').change(function(){
+$('.simple_3').change(function(){
 	$('.datetime').fadeToggle()
+	console.log($(this).is(":checked"))
+	
 })
