@@ -158,3 +158,7 @@ $('.simple_3').change(function(){
 	console.log($(this).is(":checked"))
 	
 })
+
+$('.banner .list>.item:nth-child(2)').click(function(){
+	location.href = 'contentPage.html'
+})
